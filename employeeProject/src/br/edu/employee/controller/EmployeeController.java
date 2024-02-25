@@ -1,15 +1,34 @@
 package br.edu.employee.controller;
 
-import br.edu.employee.model.Employee;
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.PrintWriter;
+
 import javax.swing.JOptionPane;
+
+import br.edu.employee.dao.EmployeeDao;
+import br.edu.employee.model.Employee;
 
 public class EmployeeController {
 	
 	public static void main(String[] args) {
 		
-		Employee employee = new Employee("Lucas", "Desenvolvedor", 2000.0);
+		EmployeeDao dao = new EmployeeDao();
+		//record
+		dao.recordEmployee();
 		
-		JOptionPane.showMessageDialog(null, employee);
+		//reader
+		dao.readerEmployee();
+	
+		
+		
 	}
+	
+	
+	
+	
 
 }

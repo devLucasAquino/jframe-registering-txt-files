@@ -1,11 +1,17 @@
 package br.edu.employee.model;
 
+import javax.swing.JOptionPane;
+
 public class Employee {
 	
 	private Long id;
 	private String name;
 	private String office;
 	private Double wage;
+	
+	public Employee() {
+		
+	}
 	
 	public Employee(String name, String office, Double wage) {
 		this.name = name;
@@ -41,7 +47,7 @@ public class Employee {
 	public String toString() {
 		return "Name: " +this.name+
 			 ", Office: " +this.office+
-			 ", Wage: " +this.wage;
+			 ", Wage: " +this.wage+ "\n";
 	}
 
 }
